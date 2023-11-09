@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.header {
+  padding: 1rem;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  padding: 2rem;
+  display: flex;
+}
+
+.form_section {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.board_section {
+  width: 60%;
+}
+
+.x_section{
+  display: flex;
+}
+
+.board_container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  border-radius: .25rem;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.black_square {
+  background-color: black;
+}
+
+.row_container{
+  display: grid;
+  border: 1px solid black;
+  grid-template-rows: repeat(8, 1fr);
+  height: 400px;
+  width: 36px;
+}
+
+.row_container > div,
+.col_container > div {
+  border: 1px solid black;
+}
+
+.col_container {
+  display: grid;
+  border: 1px solid black;
+  grid-template-columns: repeat(8, 1fr);
+  width: 400px;
+  height: 36px;
+  margin-left: 2.2rem;
+}
+
+.ending_from {
+  display: none;
+}
+
+.starting_form,
+.ending_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.ending_form{
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+  padding: .5rem 1.5rem;
+  background-color: #f1f5f9;
+  border-radius: .5rem;
+  transition: transform ease-in-out 200ms;
+  font-size: 1.25rem;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #cbd5e1;
+}
+
+.icon {
+  width: 30px;
+  height: auto;
+}
+
+.result_panel {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  gap: 2rem;
+  background-color: rgba(150, 150, 150, 0.25);
+  padding: .5rem;
+  border-radius: .5rem;
+  width: 70%;
+  height: 50%;
+}
+
+@media (max-width: 500px){
+  .main {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .form_section,
+  .board_section {
+    width: 90%;
+  }
+  .form_section {
+    padding-top: 1rem;
+  }
+  .board_container,
+  .col_container{
+    width: 350px;
+  }
+  .col_container {
+    margin-left: 2rem;
+  }
+}

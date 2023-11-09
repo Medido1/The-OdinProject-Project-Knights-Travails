@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./knight-chess-svgrepo-com.svg" type="image/x-icon">
+  <script src="./script.js" defer></script>
+  <title>Knights Travails</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Knights travails 3rd</h1>
+  </header>
+  <main class="main">
+    <section class="form_section">
+      <form class="starting_form">
+        <div>
+          <label for="x_start">Starting X</label>
+          <input type="number" name="x_start" id="x_start">
+        </div>
+        <div>
+          <label for="y_start">Starting Y</label>
+          <input type="number" name="y_start" id="y_start">
+        </div>
+        <button class="btn" type="submit">Start</button>
+      </form>
+      <form class="ending_form">
+        <div>
+          <label for="x_end">ending X</label>
+          <input type="number" name="x_end" id="x_end">
+        </div>
+        <div>
+          <label for="y_end">ending Y</label>
+          <input type="number" name="y_end" id="y_end">
+        </div>
+        <button class="btn" type="submit">show result</button>
+      </form>
+      <div class="result_panel">
+        <p class="result"></p>
+        <button class="btn reset_btn">reset</button>
+      </div>
+    </section>
+    <section class="board_section">
+      <div class="x_section">
+        <div class="row_container"></div>
+        <div class="board_container"></div>
+      </div>
+      <div class="col_container"></div>
+    </section>
+  </main>
+</body>
+</html>
